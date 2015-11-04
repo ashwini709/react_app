@@ -1,0 +1,13 @@
+{
+  "name": "react-app",
+  "version": "1.0.0",
+  "repository": "https://github.com/kkvesper/ts_ember",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "author": "Ashwini Meshram <ashwini709@gmail.com>",
+  "devDependencies": {
+    "webpack": "^1.12.2"
+  },
+  "dependencies": {}
+}
