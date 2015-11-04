@@ -1,8 +1,8 @@
 'use strict'
+require('../styles/main.less')
 
 var React = require('react')
 var ReactDOM = require('react-dom')
-var Hello = require('./Hello')
-var AddEvent = require('./add-event')
+var Main = require('./main')
 
-ReactDOM.render(<AddEvent />, document.getElementById('content'))
+ReactDOM.render(<Main />, document.getElementById('content'))
