@@ -20,9 +20,9 @@ module.exports = React.createClass({
         eventDuration = 'All Day Event'
       }
       var event = {
-        eventName: eventName,
-        eventTime: eventTime,
-        eventDuration: eventDuration
+        name: eventName,
+        time: eventTime,
+        duration: eventDuration
       }
 
       if (eventName.length != 0) {

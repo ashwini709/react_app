@@ -2,6 +2,7 @@
 
 var React = require('react')
 var EventListHeader = require('./event-list-header')
+var EventItem = require('./event-item')
 
 module.exports = React.createClass({
     displayName: 'Event List',
@@ -12,20 +13,17 @@ module.exports = React.createClass({
       }
     },
 
-    renderChildren: function () {
-      var children = {};
-      var counter = 0;
-      this.state.items.forEach(item => children[counter++] = <EventListHeader />);
-      return <div>{children}</div>;
-    },
-
     render: function(){
         return <div className="event-list">
           <div className="event-list-header">
             <EventListHeader />
           </div>
           <div className="event-summary">
-            {this.renderChildren()}
+            <ul>
+              {this.state.items.map(function(item) {
+                return <EventItem key={item.id} data={item}/>;
+              })}
+            </ul>
           </div>
         </div>
     }
