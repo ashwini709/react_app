@@ -6,8 +6,18 @@
     "node": ">= 0.10.0"
   },
   "author": "Ashwini Meshram <ashwini709@gmail.com>",
-  "devDependencies": {
-    "webpack": "^1.12.2"
+  "scripts": {
+    "start": "webpack-dev-server --progress --colors --port 8090 --host 0.0.0.0"
   },
-  "dependencies": {}
+  "name": "basic-property-grid",
+  "version": "0.1.0",
+  "main": "index.js",
+  "devDependencies": {
+    "jsx-loader": "^0.13.2",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "react": "^0.14.2"
+  }
 }
