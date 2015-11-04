@@ -1,6 +1,6 @@
 {
-  "name": "react-app",
-  "version": "1.0.0",
+  "name": "basic-property-grid",
+  "version": "0.1.0",
   "repository": "https://github.com/kkvesper/ts_ember",
   "engines": {
     "node": ">= 0.10.0"
@@ -9,15 +9,17 @@
   "scripts": {
     "start": "webpack-dev-server --progress --colors --port 8090 --host 0.0.0.0"
   },
-  "name": "basic-property-grid",
-  "version": "0.1.0",
   "main": "index.js",
   "devDependencies": {
+    "css-loader": "^0.21.0",
     "jsx-loader": "^0.13.2",
+    "less-loader": "^2.2.1",
+    "style-loader": "^0.13.0",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
-    "react": "^0.14.2"
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2"
   }
 }
