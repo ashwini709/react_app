@@ -29,9 +29,8 @@ module.exports = React.createClass({
         duration: eventDuration
       }
 
-      eventItem[this.state.counter] = event
       var toAdd = this.state.events
-      toAdd.push(eventItem)
+      toAdd.push(event)
       if (eventName.length != 0) {
         localStorage.setItem('event', JSON.stringify(toAdd))
         localStorage.setItem('counter', this.state.counter)

@@ -11,7 +11,7 @@ var ItemStore = Reflux.createStore({
   },
 
   updateItems() {
-    localStorage.getItem('event');
+    return JSON.parse(localStorage.getItem('event'));
   }
 })
 

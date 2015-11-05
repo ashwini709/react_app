@@ -1,9 +1,35 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #C0C0C0;
+}
+
+#content {
+  margin: 8px;
+  height: 100%
+}
+
 .event-app {
   display: flex;
   color: black;
+  height: 100%;
+}
+
+.event-list {
+  border-left: 1px solid grey;
+  display: flex;
+  flex-direction: column;
 }
 
 .event-form, .event-list {
+  flex: 1;
+}
+
+.event-summary {
   flex: 1;
 }
 
@@ -50,11 +76,30 @@ button {
   background-color: #3cbd77;
 }
 
+ul {
+  padding: 0;
+  margin-top: 0;
+
+  li {
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
 .header-container {
+  border-bottom: 1px solid grey;
+}
+
+.header-container, .event-item {
   display: flex;
 
   > div {
     flex: 1;
     text-align: center;
   }
+}
+
+.event-item + .event-item {
+  margin-top: 5px;
+  border-top: 1px solid gray;
 }
