@@ -1,5 +1,5 @@
 {
-  "name": "basic-property-grid",
+  "name": "react-event-app",
   "version": "0.1.0",
   "repository": "https://github.com/kkvesper/ts_ember",
   "engines": {
@@ -20,6 +20,8 @@
   },
   "dependencies": {
     "react": "^0.14.2",
-    "react-dom": "^0.14.2"
+    "react-dom": "^0.14.2",
+    "react-router": "^1.0.0-rc4",
+    "reflux": "^0.3.0"
   }
 }
