@@ -10,7 +10,7 @@ module.exports = React.createClass({
     getInitialState: function() {
       return {
         counter: localStorage.getItem('counter') || 0,
-        events: localStorage.getItem('event') || []
+        events: JSON.parse(localStorage.getItem('event')) || []
       }
     },
 
@@ -35,7 +35,7 @@ module.exports = React.createClass({
         localStorage.setItem('event', JSON.stringify(toAdd))
         localStorage.setItem('counter', this.state.counter)
         this.setState({counter: parseInt(this.state.counter) + 1})
-        ItemStore.updateItems()
+        ItemActions.onEventsAdd()
       }
     },
 

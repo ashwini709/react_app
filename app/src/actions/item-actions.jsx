@@ -3,5 +3,9 @@
 var Reflux = require('reflux')
 
 var ItemActions = Reflux.createActions([
-  'updateItems'
+  'onEventsAdd'
 ]);
+
+ItemActions.onEventsAdd();
+
+module.exports = ItemActions;

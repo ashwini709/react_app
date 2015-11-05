@@ -7,11 +7,13 @@ var ItemStore = Reflux.createStore({
   listenables: [ItemActions],
 
   init() {
-    this.updateItems();
+    this.listenTo(ItemActions.onEventsAdd, this.updateItems)
   },
 
+
   updateItems() {
-    return JSON.parse(localStorage.getItem('event'));
+    var items  = JSON.parse(localStorage.getItem('event'))
+    this.trigger(items)
   }
 })
 

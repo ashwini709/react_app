@@ -10,8 +10,20 @@ module.exports = React.createClass({
 
   getInitialState: function() {
     return this.state = {
-      items : ItemStore.updateItems() || []
+      items : JSON.parse(localStorage.getItem('event')) || []
     };
+  },
+
+  componentDidMount: function() {
+    this.unsubscribe = ItemStore.listen(this.onEventsAdd)
+  },
+
+  componentWillUnmount: function() {
+    this.unsubscribe()
+  },
+
+  onEventsAdd(state) {
+    this.setState({items: state})
   },
 
   render: function(){
